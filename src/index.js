@@ -1,19 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
+//TODO USER
+import User from './CrudUsers/User';
+import store from './CrudUsers/store';
+//TODO COUNTER 
 import Counter from './Counter';
-import { legacy_createStore } from 'redux';
+import { Provider } from 'react-redux';
 import reducer from './reducer';
-const store = legacy_createStore(reducer)
-
+import { legacy_createStore } from 'redux';
+const storeCounter = legacy_createStore(reducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <Counter />
+    <User />
   </Provider>
 );
 
