@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Decrementer, Incrementer, Reset } from './action';
 
 export default function Counter() {
-  // const num = useSelector(data => data.num);
+  const num = useSelector(data => data.num);
   const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="text-6xl font-bold text-gray-800 mb-8">{/*{num}*/}0</div>
+      <div className="text-6xl font-bold text-gray-800 mb-8">{num}</div>
       <div className="flex space-x-4">
         <button
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition duration-300"
