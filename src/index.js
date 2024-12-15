@@ -5,17 +5,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //TODO USER
 // import User from './CrudUsers/User';
-import store from './CrudUsers/store';
+// import store from './CrudUsers/store';
 //TODO COUNTER 
 // import Counter from './Counter';
-import { Provider } from 'react-redux';
-import reducer from './reducer';
-import { legacy_createStore } from 'redux';
+// import reducer from './reducer';
+// import { legacy_createStore } from 'redux';
 // const storeCounter = legacy_createStore(reducer)
 
 //TODO CLIENT
 import Clients from './Client/clients';
+import store from './Client/store';
 
+import { Provider } from 'react-redux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
